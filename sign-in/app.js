@@ -7,7 +7,6 @@ let signupForm = document.getElementById('sign-in-form');
 
 async function register(e){
   e.preventDefault();
-
   console.log(email.value, password.value);
 
   try {
@@ -18,7 +17,11 @@ async function register(e){
 
     if(error){
       console.log("Error ----->", error.message);
-      alert(error.message);
+      Swal.fire({
+    icon: 'error',
+    title: 'Login Failed',
+    text: error.message,
+  });
       return;
     }
 
@@ -29,8 +32,13 @@ async function register(e){
       email.value = '';
       password.value = '';
 
-      alert("Signup successful! Go verify your email.");
-    }
+  Swal.fire({
+    icon: 'success',
+    title: 'Welcome!',
+    timer: 1500,
+    showConfirmButton: false
+  });
+  }
 
   } catch (err) {
     console.log("Catch Error ----->", err);
