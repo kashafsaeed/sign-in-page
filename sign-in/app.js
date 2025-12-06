@@ -3,7 +3,7 @@ import supabase from './config.js'
 
 let email = document.getElementById('email');
 let password = document.getElementById('password');
-let signupForm = document.getElementById('sign-in-form');
+let signupForm = document.getElementById('sign-up-form');
 
 async function register(e){
   e.preventDefault();
