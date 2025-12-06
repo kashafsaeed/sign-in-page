@@ -1,4 +1,4 @@
-import { supabase } from './config.js';
+import  supabase  from './config.js';
 
 let documentEmail = document.getElementById('email-address');
 let documentPassword = document.getElementById('password-genrate');
